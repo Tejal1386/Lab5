@@ -89,6 +89,8 @@
                         <viewLayoutGuide key="safeArea" id="ZFt-bZ-b8k"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="PZ9-59-tuT" id="3dv-jL-73y"/>
+                        <outlet property="nextButton" destination="NYb-Qb-x88" id="u0S-ag-AzH"/>
                         <outlet property="secondScreen" destination="RQF-VL-QTV" id="vNL-81-xdk"/>
                         <outlet property="secondView" destination="iWZ-IO-EuH" id="RGo-6G-Ydc"/>
                         <segue destination="nNn-uF-huU" kind="presentation" identifier="EndView" id="qbi-G3-iJn"/>
@@ -142,6 +144,7 @@
         <image name="nextbutton_160" width="160" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="qbi-G3-iJn"/>
         <segue reference="jUF-pd-gAt"/>
     </inferredMetricsTieBreakers>
 </document>

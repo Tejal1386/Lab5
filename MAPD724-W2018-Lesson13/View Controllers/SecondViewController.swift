@@ -14,6 +14,9 @@ class SecondViewController: UIViewController {
     
     @IBOutlet var secondView: UIView!
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +27,20 @@ class SecondViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        // secondScreen.center.x  -= view.bounds.width
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
-      
+        AnimateLableIn()
         AnimateSecondScreenLabel()
+    AnimateButtonIn()
+    }
     
+    func AnimateLableIn(){
+        UIView.animate(withDuration: 1, delay: 0.25, options: [.curveEaseInOut], animations:{        self.secondScreen.alpha = 1
+            self.secondScreen.center.y -= 150
+        }, completion: nil )
+        
     }
     
     func AnimateSecondScreenLabel() {
@@ -62,6 +72,15 @@ class SecondViewController: UIViewController {
         }, completion: nil)
     }
     
+    
+    func AnimateButtonIn()  {
+        UIView.transition(with: self.nextButton, duration: 2, options: [.transitionFlipFromTop], animations: {
+           self.nextButton.center.x -= 200
+        }, completion: nil)
+        UIView.transition(with: self.backButton, duration: 2, options: [.transitionFlipFromTop], animations: {
+            self.backButton.center.x += 200
+        }, completion: nil)
+    }
     
     @IBAction func BackButton(_ sender: UIButton) {
         performSegue(withIdentifier: SegueManager.StartView, sender: sender)
