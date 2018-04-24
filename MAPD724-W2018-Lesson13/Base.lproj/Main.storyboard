@@ -118,7 +118,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX1-LO-DPD">
-                                <rect key="frame" x="122" y="188" width="131" height="50"/>
+                                <rect key="frame" x="122" y="291" width="131" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,7 +144,6 @@
         <image name="nextbutton_160" width="160" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qbi-G3-iJn"/>
         <segue reference="jUF-pd-gAt"/>
     </inferredMetricsTieBreakers>
 </document>

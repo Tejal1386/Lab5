@@ -20,7 +20,7 @@ class EndViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         AnimateEndScreenLabel()
-        backbutton()
+        ButtonMoveLeft()
        
     }
     
@@ -29,6 +29,11 @@ class EndViewController: UIViewController {
          performSegue(withIdentifier: SegueManager.SecondView, sender: sender)
     }
     
+   func  ButtonMoveLeft(){
+    UIView.animate(withDuration: 2, delay: 0.25, options: [.curveEaseIn], animations: {
+    self.backButton.center.x -= 125
+    }, completion: nil)
+}
     func AnimateEndScreenLabel() {
                 UIView.animateKeyframes(withDuration: 4, delay: 0,
                                             options: [.repeat, .autoreverse], animations: {
@@ -55,17 +60,7 @@ class EndViewController: UIViewController {
                     }, completion: nil)
             }
     
-    func backbutton(){
-        backButton.transform = backButton.transform.scaledBy(x: 0.001, y: 0.001)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
-            self.backButton.transform = CGAffineTransform.identity.scaledBy(x: 1.5, y: 1.5)
-        }, completion: nil)
-        // for zoom out
-        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
-            self.backButton.transform = CGAffineTransform.identity.scaledBy(x: 1.0, y: 1.0)
-        }, completion: nil)
-    }
+    
     
 }
 
