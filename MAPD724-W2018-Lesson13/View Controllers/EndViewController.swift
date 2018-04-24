@@ -34,21 +34,21 @@ class EndViewController: UIViewController {
                                             options: [.repeat, .autoreverse], animations: {
             
                         UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25, animations: {
-                            self.endLabel.center.y += 100
+                            self.endLabel.center.y -= 200
                             
             
                        })
             
                         UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
-                                self.endLabel.center.y += 50
+                                //self.endLabel.center.y += 50
                         })
             
                         UIView.addKeyframe(withRelativeStartTime: 0.50, relativeDuration: 0.25, animations: {
-                            self.endLabel.center.y += 50
+                            self.endLabel.center.y += 200
                         })
             
                         UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25, animations: {
-                            self.endLabel.center.y -= 250
+                           // self.endLabel.center.y -= 250
                         })
             
             
